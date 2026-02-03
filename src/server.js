@@ -6,6 +6,7 @@ require('./cron/reminder.cron');
 
 const authRoutes = require('./routes/auth.routes');
 const bookingRoutes = require('./routes/booking.routes');
+const roomRoutes = require('./routes/room.routes');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use('/api/rooms', roomRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'MeetHub Backend Running 🚀' });

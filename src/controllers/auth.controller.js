@@ -29,3 +29,8 @@ exports.login = (req, res) => {
     res.json({ token, user: r[0] });
   });
 };
+
+exports.logout = (req, res) => {
+  // No real server-side logout needed for stateless JWT
+  res.json({ message: "Logged out successfully" });
+};
